@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PERSPECTIVES FROM THE HART</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Perspectives<br>From The Hart</h1>
+        <p class="tagline">Curating Visual Intelligence</p>
+    </header>
+    <main role="main">
+        <section class="status-box" aria-live="polite" aria-atomic="true">
+            <span class="dot" aria-hidden="true"></span>
+            <span class="status-text">System Status: <strong>Online</strong></span>
+        </section>
+    </main>
+    <footer>
+        <p class="credit">&copy; <span id="year"></span> Perspectives From The Hart</p>
+    </footer>
+
+    <script>
+        // small script to keep footer year current
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

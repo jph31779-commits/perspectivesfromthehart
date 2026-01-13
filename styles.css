@@ -1,0 +1,70 @@
+:root{
+  --bg:#050505; /* Vanta Black */
+  --fg:#C0C0C0; /* Brushed Nickel */
+  --muted:#696969;
+  --alert:#8B0000;
+  --box:#111;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:'Courier New',Courier,monospace;
+  background-color:var(--bg);
+  color:var(--fg);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  text-transform:uppercase;
+  padding:2rem;
+}
+
+h1{
+  font-size:clamp(1.5rem,4vw,3rem);
+  letter-spacing:4px;
+  margin:0 0 0.5rem 0;
+  border-bottom:1px solid var(--muted);
+  padding-bottom:1rem;
+}
+.tagline{
+  margin:0.5rem 0 0;
+  font-size:0.9rem;
+  text-transform:none;
+  color:var(--fg);
+}
+
+.status-box{
+  margin-top:2rem;
+  font-size:0.9rem;
+  border:1px solid #222;
+  background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
+  padding:12px 20px;
+  border-radius:8px;
+  display:inline-flex;
+  align-items:center;
+  gap:0.5rem;
+}
+
+.dot{
+  height:12px;
+  width:12px;
+  background-color:var(--alert);
+  border-radius:50%;
+  display:inline-block;
+  box-shadow:0 0 8px var(--alert);
+  flex:0 0 12px;
+}
+
+.status-text{font-variant:small-caps}
+
+footer{margin-top:2rem; font-size:0.8rem; color:var(--muted)}
+
+a:focus, button:focus { outline:3px solid #444; outline-offset:2px }
+
+@media (max-width:420px){
+  body{padding:1rem}
+  .status-box{font-size:0.8rem}
+}
