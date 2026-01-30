@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovations from the Hart LLC | Defense Contracting & Strategic Solutions</title>
+    <meta name="description" content="Award-winning defense contractor providing strategic solutions, cyber capabilities, and mission-critical services to federal government and DoD agencies.">
+    <meta name="theme-color" content="#000000">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #0a0a0a;
+            color: #f0f0f0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 100%);
+            border-bottom: 2px solid #c41e3a;
+            padding: 2rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(196, 30, 58, 0.1);
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #f0f0f0;
+            text-transform: uppercase;
+        }
+        
+        .logo span {
+            color: #c41e3a;
+        }
+        
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        nav a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 4px;
+        }
+        
+        nav a:hover {
+            color: #c41e3a;
+            border-bottom-color: #c41e3a;
+        }
+        
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            color: #c41e3a;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #b0b0b0;
+            margin-bottom: 2rem;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+        }
+        
+        .credentials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 4rem auto;
+            max-width: 1200px;
+            padding: 0 2rem;
+            margin-bottom: 6rem;
+        }
+        
+        .credential-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+            padding: 2rem;
+            border-left: 4px solid #c41e3a;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .credential-card:hover {
+            background: linear-gradient(135deg, #252525 0%, #1a1a1a 100%);
+            transform: translateX(8px);
+            box-shadow: 0 8px 24px rgba(196, 30, 58, 0.15);
+        }
+        
+        .credential-card h3 {
+            color: #c41e3a;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        
+        .credential-card p {
+            font-size: 1.3rem;
+            font-weight: 600;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .capabilities {
+            background: linear-gradient(180deg, #0a0a0a 0%, #15151515 100%);
+            padding: 5rem 2rem;
+            margin: 3rem 0;
+        }
+        
+        .capabilities-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+        
+        .section-title span {
+            color: #c41e3a;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #909090;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .capability {
+            background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+            padding: 2rem;
+            border-radius: 2px;
+            border-top: 3px solid #c41e3a;
+            transition: all 0.3s ease;
+        }
+        
+        .capability:hover {
+            background: linear-gradient(135deg, #252525 0%, #1a1a1a 100%);
+            box-shadow: 0 12px 32px rgba(196, 30, 58, 0.2);
+            transform: translateY(-4px);
+        }
+        
+        .capability h4 {
+            color: #c41e3a;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .capability p {
+            color: #d0d0d0;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+        
+        .security-clearance {
+            background: linear-gradient(135deg, rgba(196, 30, 58, 0.1) 0%, rgba(196, 30, 58, 0.05) 100%);
+            border: 1px solid #c41e3a;
+            padding: 2.5rem;
+            border-radius: 2px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .security-clearance h3 {
+            color: #c41e3a;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+        
+        .clearance-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .clearance-item {
+            color: #f0f0f0;
+            font-size: 0.95rem;
+        }
+        
+        .cta-section {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, #c41e3a 0%, #a01628 100%);
+            color: #fff;
+            padding: 1rem 2.5rem;
+            border: none;
+            border-radius: 2px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .cta-button:hover {
+            background: linear-gradient(135deg, #e63451 0%, #c41e3a 100%);
+            box-shadow: 0 8px 24px rgba(196, 30, 58, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .contact-section {
+            background: linear-gradient(180deg, #15151515 0%, #0a0a0a 100%);
+            padding: 4rem 2rem;
+            border-top: 2px solid #c41e3a;
+            text-align: center;
+            margin-top: 5rem;
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .contact-item h4 {
+            color: #c41e3a;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        
+        .contact-item p {
+            color: #d0d0d0;
+            font-size: 1rem;
+        }
+        
+        footer {
+            background: #050505;
+            border-top: 1px solid #2a2a2a;
+            padding: 2rem;
+            text-align: center;
+            color: #707070;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Innovations <span>from the Hart</span></div>
+            <nav>
+                <a href="#capabilities">Capabilities</a>
+                <a href="#clearances">Credentials</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <h1>Patriot Class <span>Defense Contracting</span></h1>
+        <p class="hero-subtitle">Strategic Solutions for Mission-Critical Operations</p>
+        
+        <div class="credentials">
+            <div class="credential-card">
+                <h3>CAGE Code</h3>
+                <p>7KZ29</p>
+            </div>
+            <div class="credential-card">
+                <h3>UEI Number</h3>
+                <p>JS4S7K8B9M2</p>
+            </div>
+            <div class="credential-card">
+                <h3>SAM Status</h3>
+                <p>Active | Verified</p>
+            </div>
+        </div>
+    </section>
+    
+    <section class="capabilities">
+        <div class="capabilities-container">
+            <h2 class="section-title">Core <span>Capabilities</span></h2>
+            <p class="section-subtitle">Delivering excellence across defense and federal markets</p>
+            
+            <div class="capabilities-grid">
+                <div class="capability">
+                    <h4>Strategic Consulting</h4>
+                    <p>Executive-level guidance for government agencies and DoD programs. Risk assessment, program optimization, and federal compliance frameworks.</p>
+                </div>
+                <div class="capability">
+                    <h4>Cyber Security</h4>
+                    <p>Advanced threat detection and mitigation. NIST compliance, vulnerability assessment, and zero-trust architecture implementation.</p>
+                </div>
+                <div class="capability">
+                    <h4>Systems Integration</h4>
+                    <p>End-to-end integration of critical defense systems. Legacy modernization, interoperability solutions, and enterprise architecture.</p>
+                </div>
+                <div class="capability">
+                    <h4>Program Management</h4>
+                    <p>Full lifecycle program oversight. Schedule management, budget optimization, and stakeholder coordination for federal contracts.</p>
+                </div>
+                <div class="capability">
+                    <h4>Compliance & Certifications</h4>
+                    <p>Federal acquisition compliance (FAR), export control (EAR/ITAR), security protocols, and quality assurance management.</p>
+                </div>
+                <div class="capability">
+                    <h4>Training & Development</h4>
+                    <p>Specialized training programs for federal workforce. Operational readiness, system certification, and professional development.</p>
+                </div>
+            </div>
+            
+            <div class="security-clearance" id="clearances">
+                <h3>Security & Compliance</h3>
+                <div class="clearance-list">
+                    <div class="clearance-item">✓ Secret Clearance Eligible</div>
+                    <div class="clearance-item">✓ NIST 800-171 Compliant</div>
+                    <div class="clearance-item">✓ ITAR Registered</div>
+                    <div class="clearance-item">✓ FAR Certified Contractor</div>
+                    <div class="clearance-item">✓ Disaster Recovery Ready</div>
+                    <div class="clearance-item">✓ ISO 27001 Framework</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div style="text-align: center;">
+            <p style="color: #909090; margin-bottom: 1.5rem; font-size: 1.1rem;">Ready to partner with excellence?</p>
+            <a href="mailto:contracts@innovationsf.com" class="cta-button">Discuss Your Project</a>
+        </div>
+    </section>
+    
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Get In <span>Touch</span></h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <h4>Email</h4>
+                    <p><a href="mailto:contracts@innovationsf.com" style="color: #c41e3a; text-decoration: none;">contracts@innovationsf.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <h4>Government Sales</h4>
+                    <p><a href="mailto:proposals@innovationsf.com" style="color: #c41e3a; text-decoration: none;">proposals@innovationsf.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <h4>Business Hours</h4>
+                    <p>Monday - Friday, 8AM - 6PM EST</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2026 Innovations from the Hart LLC. All rights reserved. | CAGE: 7KZ29 | UEI: JS4S7K8B9M2</p>
+    </footer>
+</body>
+</html>
